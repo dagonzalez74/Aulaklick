@@ -1,9 +1,11 @@
 package com.aulaklik.klikalumnov2
 
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.HtmlCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -17,6 +19,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Toast.makeText(this, "Hello world!", Toast.LENGTH_SHORT).show()
+
+        // Llenado de descripción
+        val descriptionView = findViewById<TextView>(R.id.description)
+        val descriptionText = getString(R.string.description_text)
+
+        descriptionView.text = HtmlCompat.fromHtml(descriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 }
