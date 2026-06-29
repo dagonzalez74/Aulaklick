@@ -20,10 +20,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Llenado de descripción
+        // Llenado de descripción y del mensaje de bienvenida con HTML
         val descriptionView = findViewById<TextView>(R.id.description)
+        val welcomeMessage = findViewById<TextView>(R.id.welcome_message)
         val descriptionText = getString(R.string.description_text)
+        val welcomeText = getString(R.string.welcome_message)
 
         descriptionView.text = HtmlCompat.fromHtml(descriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
+        welcomeMessage.text = HtmlCompat.fromHtml(welcomeText, HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 }
