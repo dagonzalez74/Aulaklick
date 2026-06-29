@@ -153,4 +153,10 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <include
+        android:id="@+id/first_pills_line"
+        layout="@layout/separator_pills"
+        app:layout_constraintTop_toBottomOf="@+id/section_groups"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
