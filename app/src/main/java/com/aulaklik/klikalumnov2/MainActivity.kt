@@ -1,6 +1,8 @@
 package com.aulaklik.klikalumnov2
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -28,5 +30,11 @@ class MainActivity : AppCompatActivity() {
 
         descriptionView.text = HtmlCompat.fromHtml(descriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
         welcomeMessage.text = HtmlCompat.fromHtml(welcomeText, HtmlCompat.FROM_HTML_MODE_LEGACY)
+
+        val btnAccess = findViewById<Button>(R.id.button_access)
+
+        btnAccess.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
     }
 }

@@ -8,4 +8,9 @@
     <string name="description_text"><![CDATA[<b><font color="#165989">Diseñada para potenciar</font></b> <font color="#6BB3A3">la enseñanza y el aprendizaje de forma dinámica, interactiva y personalizada.</font>]]></string>
     <string name="welcome_message"><![CDATA[<b>¡Bienvenido!</b>]]></string>
     <string name="forgot_password_text"><u>Olvidé mi contraseña</u></string>
+    <string name="improving"><b>Innovando para mejorar la educación</b></string>
+    <string name="education"><b>la educación</b></string>
+    <string name="groups_text"><b>Grupos</b></string>
+    <string name="groups_description">Gestiona los grupos escolares y su información relacionada</string>
+    <string name="groups_btn">Ir a grupos</string>
 </resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_header"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_blue_white"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Línea que divide la pantalla a la mitad -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+        <TextView
+            android:id="@+id/first_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_blue_rounded"
+            android:padding="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/banner"
+            android:text="@string/improving"
+            android:textSize="10sp"
+            android:layout_marginTop="15sp"
+            />
+
+        <TextView
+            android:id="@+id/second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_blue_rounded"
+            android:padding="6dp"
+            android:text="@string/education"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_text"
+            android:layout_marginTop="0dp"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/klik_soluciones"
+            app:layout_constraintTop_toBottomOf="@+id/second_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginTop="15sp"
+            />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/libro_firma"
+            app:layout_constraintTop_toTopOf="@+id/banner"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/banner"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/first_separator"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/separator_blue"
+        app:layout_constraintTop_toBottomOf="@+id/banner">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/section_groups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/first_separator">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/groups_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4"
+            />
+
+        <ImageView
+            android:id="@+id/groups_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/grupos_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/groups_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="15sp"
+            />
+
+        <TextView
+            android:id="@+id/group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/groups_text"
+            android:textColor="@color/semi_blue"
+            app:layout_constraintTop_toTopOf="@+id/section_groups"
+            app:layout_constraintStart_toEndOf="@+id/groups_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25sp"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/group_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/groups_description"
+            app:layout_constraintTop_toBottomOf="@+id/group_title"
+            app:layout_constraintStart_toEndOf="@+id/groups_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/group_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="@string/groups_btn"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/group_description"
+            app:layout_constraintStart_toEndOf="@+id/groups_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
