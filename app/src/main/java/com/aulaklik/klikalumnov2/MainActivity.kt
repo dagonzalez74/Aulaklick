@@ -31,10 +31,18 @@ class MainActivity : AppCompatActivity() {
         descriptionView.text = HtmlCompat.fromHtml(descriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
         welcomeMessage.text = HtmlCompat.fromHtml(welcomeText, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
+        // Botón para el inicio de sesión
         val btnAccess = findViewById<Button>(R.id.button_access)
 
         btnAccess.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        // Botón para el "olvidé mi contraseña"
+        val btnForgotPassword = findViewById<TextView>(R.id.forgot_password)
+
+        btnForgotPassword.setOnClickListener {
+            Toast.makeText(this, "Se me olvidó mi contraseña", Toast.LENGTH_SHORT).show()
         }
     }
 }
