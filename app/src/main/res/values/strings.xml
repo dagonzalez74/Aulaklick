@@ -13,4 +13,18 @@
     <string name="groups_text"><b>Grupos</b></string>
     <string name="groups_description">Gestiona los grupos escolares y su información relacionada</string>
     <string name="groups_btn">Ir a grupos</string>
+    <string name="logo_klik">Logo Klik</string>
+    <string name="libro_de_firmas">Libro de firmas</string>
+    <string name="people">people</string>
+    <string name="dotted_line">dotted line</string>
+    <string name="vista_de_computadora">Vista de computadora</string>
+    <string name="window_description_title"><![CDATA[<b><font color="#4ab7a2">Practica tu inglés</font></b>]]></string>
+    <string name="window_first_description">
+        Mejora tu nivel de inglés de forma dinámica y divertida. En esta sección encontrarás herramientas
+        diseñadas para ayudarte a aprender y reforzar tus conocimientos de manera práctica.
+    </string>
+    <string name="window_second_description">
+        ¡Empieza hoy y lleva tu inglés al siguiente nivel!
+    </string>
+    <string name="window_btn">Practicar</string>
 </resources>
