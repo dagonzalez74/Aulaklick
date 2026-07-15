@@ -8,13 +8,13 @@
 
     <ImageView
         android:id="@+id/enterprise_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
         android:src="@drawable/logo_klik"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="-35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:adjustViewBounds="true"
         />
 

@@ -27,4 +27,7 @@
         ¡Empieza hoy y lleva tu inglés al siguiente nivel!
     </string>
     <string name="window_btn">Practicar</string>
+    <string name="home_icon">Home Icon</string>
+    <string name="groups_icon">Groups Icon</string>
+    <string name="tutorials_icon">Tutorials Icon</string>
 </resources>
