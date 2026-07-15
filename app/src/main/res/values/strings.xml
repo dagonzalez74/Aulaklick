@@ -30,4 +30,9 @@
     <string name="home_icon">Home Icon</string>
     <string name="groups_icon">Groups Icon</string>
     <string name="tutorials_icon">Tutorials Icon</string>
+    <string name="groups_view_title"><![CDATA[<b><font color="#4ab7a2">Grupos</font></b>]]></string>
+    <string name="token_image">Token image</string>
+    <string name="token_text">Token</string>
+    <string name="isbn_text">ISBN</string>
+    <string name="search_group_label">Buscar grupo</string>
 </resources>

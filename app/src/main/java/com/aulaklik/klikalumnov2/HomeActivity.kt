@@ -3,11 +3,15 @@ package com.aulaklik.klikalumnov2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.text.HtmlCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.setMargins
 
 class HomeActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,5 +37,25 @@ class HomeActivity: AppCompatActivity() {
         descriptionWindow.text = HtmlCompat.fromHtml(descriptionWindowTitle, HtmlCompat.FROM_HTML_MODE_LEGACY)
         firstDescriptionView.text = HtmlCompat.fromHtml(firstDescriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
         secondDescriptionView.text = HtmlCompat.fromHtml(secondDescriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
+
+        // Tintado de la vista en la que se encuentra el usuario en el menú del footer
+        val generalServices = GeneralServices()
+
+        val tutorialIcon = findViewById<ImageView>(R.id.menu_tutorials)
+        val homeIcon = findViewById<ImageView>(R.id.menu_home)
+        val groupIcon = findViewById<ImageView>(R.id.menu_groups)
+        val userIcon = findViewById<ImageView>(R.id.menu_footer_user)
+
+        val firstDivisor = findViewById<View>(R.id.first_vertical_divisor)
+
+        generalServices.setIconMenuToActive(homeIcon, null, firstDivisor)
+
+        homeIcon.setOnClickListener {
+            // Colocar futura vista de home aquí
+        }
+
+        groupIcon.setOnClickListener {
+            generalServices.setIconMenuStartActivity(this, GroupActivity::class.java)
+        }
     }
 }

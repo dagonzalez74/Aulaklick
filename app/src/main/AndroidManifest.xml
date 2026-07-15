@@ -42,7 +42,7 @@
             android:windowSoftInputMode="adjustResize"
             tools:ignore="DiscouragedApi,LockedOrientationActivity">
             <intent-filter>
-                <action android:name="android.intent.action.GROUPS" />
+                <action android:name="android.intent.action.GROUP" />
             </intent-filter>
         </activity>
     </application>
