@@ -1,9 +1,13 @@
 package com.aulaklik.klikalumnov2
 
 import android.content.Context
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
 class GeneralServices {
     fun setIconMenuToActive(icon: ImageView, leftBar: View?, rightBar: View?) {
@@ -26,5 +30,21 @@ class GeneralServices {
         context.startActivity(intent)
     }
 
+    fun sendGetRequest(context: Context, url: String, callback: (String) -> Unit) {
+        try {
+            val queue = Volley.newRequestQueue(context)
 
+            val stringRequest = StringRequest(Request.Method.GET, url,
+                { response ->
+                     callback(response)
+                },
+                { error ->
+                    error.printStackTrace()
+                })
+
+            queue.add(stringRequest)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 }

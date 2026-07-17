@@ -27,6 +27,7 @@
         android:paddingHorizontal="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rows_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp">
@@ -35,6 +36,7 @@
                 android:id="@+id/first_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
                 android:orientation="horizontal"
                 >
 
@@ -46,7 +48,7 @@
                     android:src="@drawable/tutoriales_verde"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    />
+                    app:layout_constraintEnd_toStartOf="@+id/groups_view_title" />
 
                 <TextView
                     android:id="@+id/groups_view_title"
@@ -75,6 +77,7 @@
                     android:adjustViewBounds="true"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/token_switch"
                     android:src="@drawable/token_verde"
                     />
 
@@ -87,7 +90,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginStart="15dp"
-                    android:thumbTint="@color/switch_color_changer"/>
+                    android:thumbTint="@color/switch_color_changer"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_layout_token"
@@ -157,7 +161,8 @@
                     app:layout_constraintStart_toEndOf="@+id/isbn_img"
                     android:text="@string/isbn_text"
                     android:layout_marginStart="15dp"
-                    android:thumbTint="@color/switch_color_changer"/>
+                    android:thumbTint="@color/switch_color_changer"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_layout_isbn"
@@ -211,8 +216,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:tint="@color/semi_blue"
-                    android:adjustViewBounds="true" />
+                    android:adjustViewBounds="true"
+                    app:tint="@color/semi_blue" />
 
                 <TextView
                     android:id="@+id/search_switch"
@@ -259,6 +264,14 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/groups_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/fourth_row"
+                android:layout_marginTop="20dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
