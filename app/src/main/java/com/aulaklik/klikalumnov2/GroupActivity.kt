@@ -37,18 +37,8 @@ class GroupActivity: AppCompatActivity() {
         val viewTitleText = HtmlCompat.fromHtml(getString(R.string.groups_view_title), HtmlCompat.FROM_HTML_MODE_LEGACY)
         viewTitle.text = viewTitleText
 
-        val groupsIcon = findViewById<ImageView>(R.id.menu_groups)
-        val homeIcon = findViewById<ImageView>(R.id.menu_home)
-
-        val firstDivisor = findViewById<View>(R.id.first_vertical_divisor)
-        val secondDivisor = findViewById<View>(R.id.second_vertical_divisor)
-        val generalServices = GeneralServices()
-
-        generalServices.setIconMenuToActive(groupsIcon, firstDivisor, secondDivisor)
-
-        homeIcon.setOnClickListener {
-            generalServices.setIconMenuStartActivity(this, HomeActivity::class.java)
-        }
+        // Inicialización de footer
+        FooterServices().initStaticFooter(this, this, "groups")
 
         // Llamado de datos de grupos por estudiante
         fillViewWithData()
@@ -105,7 +95,10 @@ class GroupActivity: AppCompatActivity() {
                             ConstraintLayout.LayoutParams.MATCH_PARENT,
                             ConstraintLayout.LayoutParams.WRAP_CONTENT
                         )
-                        params.setMargins(0, 40, 220, 0)
+
+                        setPadding(15, 10, 15, 10)
+
+                        params.setMargins(0, 20, 220, 0)
                         params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
                         params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
                         params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
@@ -127,12 +120,13 @@ class GroupActivity: AppCompatActivity() {
                     val descriptionImg = ImageView(this).apply {
                         id = View.generateViewId()
                         val params = ConstraintLayout.LayoutParams(
-                            300,
-                            600
+                            250,
+                            350
                         )
-                        params.setMargins(100, -60, 0, 0)
+                        params.setMargins(100, 20, 0, 20)
                         params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
                         params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
+                        params.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
 
                         adjustViewBounds = true
 

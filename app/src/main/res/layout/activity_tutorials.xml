@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tutorials_activity"
+    android:backgroundTint="@color/white"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/tutorials_header"
+        layout="@layout/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ScrollView
+        android:id="@+id/tutorials_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tutorials_header"
+        app:layout_constraintBottom_toTopOf="@+id/tutorials_footer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/first_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/tutorials_icons"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:contentDescription="@string/groups_btn"
+                    android:src="@drawable/tutoriales_verde"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/groups_view_title" />
+
+                <TextView
+                    android:id="@+id/groups_view_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/groups_icons"
+                    android:layout_marginStart="20dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/tutorials_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

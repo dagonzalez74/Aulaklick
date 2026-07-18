@@ -5,21 +5,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/footer_separator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/barra_klik"
-        android:contentDescription="@string/dotted_line"
-        tools:ignore="MissingConstraints" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/blue_block"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@drawable/separator_blue"
-        app:layout_constraintTop_toBottomOf="@+id/footer_separator">
+        android:background="@drawable/separator_blue">
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

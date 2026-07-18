@@ -49,6 +49,17 @@
                 <action android:name="android.intent.action.GROUP" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".TutorialsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.TUTORIALS"/>
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

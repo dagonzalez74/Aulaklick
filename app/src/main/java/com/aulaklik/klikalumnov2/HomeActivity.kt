@@ -39,23 +39,6 @@ class HomeActivity: AppCompatActivity() {
         secondDescriptionView.text = HtmlCompat.fromHtml(secondDescriptionText, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
         // Tintado de la vista en la que se encuentra el usuario en el menú del footer
-        val generalServices = GeneralServices()
-
-        val tutorialIcon = findViewById<ImageView>(R.id.menu_tutorials)
-        val homeIcon = findViewById<ImageView>(R.id.menu_home)
-        val groupIcon = findViewById<ImageView>(R.id.menu_groups)
-        val userIcon = findViewById<ImageView>(R.id.menu_footer_user)
-
-        val firstDivisor = findViewById<View>(R.id.first_vertical_divisor)
-
-        generalServices.setIconMenuToActive(homeIcon, null, firstDivisor)
-
-        homeIcon.setOnClickListener {
-            // Colocar futura vista de home aquí
-        }
-
-        groupIcon.setOnClickListener {
-            generalServices.setIconMenuStartActivity(this, GroupActivity::class.java)
-        }
+        FooterServices().initStaticFooter(this, this, "home")
     }
 }
