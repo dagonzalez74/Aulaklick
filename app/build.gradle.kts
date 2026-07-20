@@ -46,6 +46,7 @@ dependencies {
     implementation("com.android.volley:volley:1.2.1")
     implementation("io.coil-kt.coil3:coil-compose:3.3.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
+    implementation("com.github.mhiew:android-pdf-viewer:3.2.0-beta.3")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

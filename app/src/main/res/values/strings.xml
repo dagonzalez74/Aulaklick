@@ -35,4 +35,6 @@
     <string name="token_text">Token</string>
     <string name="isbn_text">ISBN</string>
     <string name="search_group_label">Buscar grupo</string>
+    <string name="tutorials_view_title"><![CDATA[<b><font color="#4ab7a2">Tutoriales</font></b>]]></string>
+    <string name="manuals_view_title"><![CDATA[<b><font color="#4ab7a2">Manuales</font></b>]]></string>
 </resources>

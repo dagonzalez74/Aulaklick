@@ -41,25 +41,111 @@
 
                 <ImageView
                     android:id="@+id/tutorials_icons"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:contentDescription="@string/groups_btn"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:contentDescription="@string/tutorials_view_title"
                     android:src="@drawable/tutoriales_verde"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/groups_view_title" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tutorials_view_title" />
 
                 <TextView
-                    android:id="@+id/groups_view_title"
+                    android:id="@+id/tutorials_view_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/groups_icons"
+                    app:layout_constraintStart_toEndOf="@+id/tutorials_icons"
                     android:layout_marginStart="20dp"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/list_tutorials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/first_row"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="30dp">
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/middle_separator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/list_tutorials"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/middle_separator_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/manuals_view_title"
+                    android:src="@drawable/barra_klik"
+                    android:adjustViewBounds="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/middle_separator_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:backgroundTint="@color/semi_blue"
+                    android:background="@color/semi_blue"
+                    app:layout_constraintTop_toBottomOf="@+id/middle_separator_img"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/manual_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/middle_separator"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/manual_img"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:src="@drawable/manuales_azul"
+                    android:contentDescription="@string/manuals_view_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/manual_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/manual_img"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="20dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/list_manuals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/manual_title"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="30dp"
+                app:flow_wrapMode="chain"
+                app:flow_horizontalGap="20dp"
+                app:flow_verticalGap="20dp">
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

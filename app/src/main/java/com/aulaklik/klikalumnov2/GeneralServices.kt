@@ -47,4 +47,29 @@ class GeneralServices {
             e.printStackTrace()
         }
     }
+
+    fun sendPostRequest(context: Context, url: String, callback: (String) -> Unit) {
+        try {
+            val queue = Volley.newRequestQueue(context)
+
+            val stringRequest = StringRequest(Request.Method.POST, url,
+                { response ->
+                    callback(response)
+                },
+                { error ->
+                    error.printStackTrace()
+                })
+
+            queue.add(stringRequest)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    fun openIntentPdfViewer(context: Context, pdfUrl: String, pdfName: String?) {
+        val intent = android.content.Intent(context, PdfViewer::class.java)
+        intent.putExtra("pdfUrl", pdfUrl)
+        intent.putExtra("pdfName", pdfName)
+        context.startActivity(intent)
+    }
 }
