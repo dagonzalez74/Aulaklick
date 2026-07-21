@@ -1,9 +1,12 @@
 package com.aulaklik.klikalumnov2
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -90,6 +93,7 @@ class GroupActivity: AppCompatActivity() {
                         text = titleTxt
                         background = ContextCompat.getDrawable(this@GroupActivity, R.drawable.bg_title_semi_blue)
                         setTextColor(ContextCompat.getColor(this@GroupActivity, android.R.color.white))
+                        setTypeface(typeface, android.graphics.Typeface.BOLD)
 
                         val params = ConstraintLayout.LayoutParams(
                             ConstraintLayout.LayoutParams.MATCH_PARENT,
@@ -97,6 +101,7 @@ class GroupActivity: AppCompatActivity() {
                         )
 
                         setPadding(15, 10, 15, 10)
+                        setTypeface(typeface, android.graphics.Typeface.BOLD)
 
                         params.setMargins(0, 20, 220, 0)
                         params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
@@ -173,6 +178,8 @@ class GroupActivity: AppCompatActivity() {
                         params.topToTop = ConstraintLayout.LayoutParams.PARENT_ID
                         params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
 
+                        setTextColor(getColor(R.color.black))
+
                         layoutParams = params
                     }
 
@@ -191,6 +198,8 @@ class GroupActivity: AppCompatActivity() {
                         params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
                         params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
 
+                        setTextColor(getColor(R.color.black))
+
                         layoutParams = params
                     }
 
@@ -206,6 +215,8 @@ class GroupActivity: AppCompatActivity() {
                         params.topToBottom = textViewSemester.id
                         params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
                         params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
+
+                        setTextColor(getColor(R.color.black))
 
                         layoutParams = params
                     }
@@ -223,6 +234,8 @@ class GroupActivity: AppCompatActivity() {
                         params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
                         params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
 
+                        setTextColor(getColor(R.color.black))
+
                         layoutParams = params
                     }
 
@@ -239,7 +252,42 @@ class GroupActivity: AppCompatActivity() {
                         params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
                         params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
 
+                        setTextColor(getColor(R.color.black))
+
                         layoutParams = params
+                    }
+
+                    val btnEnterGroup = Button(this).apply {
+                        id = View.generateViewId()
+
+                        text = "Ir al grupo"
+
+                        val params = ConstraintLayout.LayoutParams(
+                            ConstraintLayout.LayoutParams.WRAP_CONTENT,
+                            ConstraintLayout.LayoutParams.WRAP_CONTENT
+                        )
+
+                        params.setMargins(0, 20, 0, 0)
+
+                        compoundDrawablePadding = 10
+
+                        background = generalServices.createRoundedBorderDrawable(
+                            25f,
+                            getColor(R.color.orange),
+                            2,
+                            getColor(R.color.orange)
+                        )
+
+                        setPadding(20, 10, 20, 10)
+                        setTextColor(getColor(R.color.white))
+
+                        setCompoundDrawablesWithIntrinsicBounds(null, null, getDrawable(R.drawable.ir_al_grupo), null)
+
+                        layoutParams = params
+                    }
+
+                    btnEnterGroup.setOnClickListener {
+                        //val intent = Intent(this, )
                     }
 
                     infoWrapper.addView(textViewIntitution)
@@ -247,6 +295,7 @@ class GroupActivity: AppCompatActivity() {
                     infoWrapper.addView(textViewNumStudents)
                     infoWrapper.addView(textViewStart)
                     infoWrapper.addView(textViewEnd)
+                    infoWrapper.addView(btnEnterGroup)
 
                     descriptionContainer.addView(descriptionImg)
                     descriptionContainer.addView(infoWrapper)

@@ -1,6 +1,7 @@
 package com.aulaklik.klikalumnov2
 
 import android.content.Context
+import android.graphics.drawable.GradientDrawable
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
@@ -71,5 +72,14 @@ class GeneralServices {
         intent.putExtra("pdfUrl", pdfUrl)
         intent.putExtra("pdfName", pdfName)
         context.startActivity(intent)
+    }
+
+    fun createRoundedBorderDrawable(cornerRadius: Float, borderColor: Int, borderWidth: Int, backgroundColor: Int): GradientDrawable {
+        return GradientDrawable().apply {
+            shape = GradientDrawable.RECTANGLE
+            setColor(backgroundColor)
+            setStroke(borderWidth, borderColor)
+            this.cornerRadius = cornerRadius
+        }
     }
 }
