@@ -47,21 +47,66 @@
                 android:id="@+id/right_menu_icon"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/username_container"
                 app:layout_constraintTop_toTopOf="parent"
                 android:contentDescription="@string/men_derecho"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:src="@drawable/icon_circle_user"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:id="@+id/username_container"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/username_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/username_carret"/>
+                
+                <ImageView
+                    android:id="@+id/username_carret"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    app:layout_constraintStart_toEndOf="@+id/username_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:contentDescription="@string/user_menu_title"
+                    android:src="@drawable/icon_caret_down"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/line_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/activity_toolbar"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/semi_blue">
+
+        <TextView
+            android:id="@+id/title_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="20dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

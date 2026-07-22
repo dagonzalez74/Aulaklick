@@ -290,6 +290,7 @@ class GroupActivity: AppCompatActivity() {
 
                     btnEnterGroup.setOnClickListener {
                         val intent = Intent(this, GroupToDoActivity::class.java)
+                        intent.putExtra("groupId", group.getString("group_id").toInt())
                         startActivity(intent)
                     }
 
@@ -313,7 +314,7 @@ class GroupActivity: AppCompatActivity() {
             }
         } catch (e: Exception) {
             Log.e("GroupActivity", "Error filling view with data: ${e.message}")
-            Toast.makeText(this, "Error loading groups: ${e.message}", LENGTH_SHORT).show()
+            Toast.makeText(this, "Error loading groups: ${e.message}", Toast.LENGTH_SHORT).show()
         }
     }
 }

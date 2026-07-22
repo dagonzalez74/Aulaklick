@@ -1,6 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dynamic_footer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blue_block"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/separator_blue"
+        tools:ignore="MissingConstraints">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/blue_block"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <ImageView
+            android:id="@+id/test"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/brain_icon"
+            android:src="@drawable/icon_brain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/first_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/semi_blue"
+            android:layout_marginVertical="10dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/first_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"
+            />
+
+        <View
+            android:id="@+id/first_vertical_divisor"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/semi_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/first_guideline"
+            app:layout_constraintEnd_toEndOf="@+id/first_guideline"
+            android:layout_marginVertical="10dp"
+            android:elevation="10dp"/>
+
+        <ImageView
+            android:id="@+id/audio_video_icon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/headphones_screen_icon"
+            android:src="@drawable/icon_audio_video"
+            app:layout_constraintStart_toStartOf="@+id/first_guideline"
+            app:layout_constraintEnd_toEndOf="@+id/second_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/semi_blue"
+            android:layout_marginVertical="10dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/second_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+            />
+
+        <View
+            android:id="@+id/second_vertical_divisor"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/semi_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/second_guideline"
+            app:layout_constraintEnd_toEndOf="@+id/second_guideline"
+            android:layout_marginVertical="10dp"
+            android:elevation="10dp"/>
+
+        <ImageView
+            android:id="@+id/controller_icon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/controller_icon"
+            android:src="@drawable/icon_controller"
+            app:tint="@color/semi_blue"
+            app:layout_constraintStart_toStartOf="@+id/second_vertical_divisor"
+            app:layout_constraintEnd_toEndOf="@+id/third_vertical_divisor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="10dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/third_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75"
+            />
+
+        <View
+            android:id="@+id/third_vertical_divisor"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/semi_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/third_guideline"
+            app:layout_constraintEnd_toEndOf="@+id/third_guideline"
+            android:layout_marginVertical="10dp"
+            android:elevation="10dp"/>
+
+        <ImageView
+            android:id="@+id/menu_footer_user"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/user_icon"
+            app:layout_constraintStart_toStartOf="@+id/third_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/baseline_person"
+            android:layout_marginVertical="10dp"
+            app:tint="@color/semi_blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,12 +39,17 @@
     <string name="manuals_view_title"><![CDATA[<b><font color="#4ab7a2">Manuales</font></b>]]></string>
     <string name="men_izquierdo">Menú izquierdo</string>
     <string name="men_derecho">Menú derecho</string>
+    <string name="user_icon">User Icon</string>
 
     <!-- Strings pertenecientes al menú del toolbar superior -->
     <string name="toolbar_menu_title">Klik</string>
-
-    <!-- Strings pertenecientes al menú del usuario -->
     <string name="user_menu_title">Usuario</string>
     <string name="user_menu_opt1">Opción 1</string>
     <string name="user_menu_opt2">Opción 2</string>
+
+    <!-- Strings del footer dinámico -->
+    <string name="brain_icon">Brain icon</string>
+    <string name="headphones_screen_icon">Headphones and screen icon</string>
+    <string name="controller_icon">Controller icon</string>
+    <string name="bag_icon">Bag icon</string>
 </resources>

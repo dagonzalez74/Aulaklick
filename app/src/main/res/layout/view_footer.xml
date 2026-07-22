@@ -9,7 +9,8 @@
         android:id="@+id/blue_block"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@drawable/separator_blue">
+        android:background="@drawable/separator_blue"
+        tools:ignore="MissingConstraints">
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/blue_block"
-        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" >
 
         <ImageView
@@ -95,7 +96,7 @@
             android:scaleType="fitCenter"
             android:contentDescription="@string/tutorials_icon"
             android:src="@drawable/tutoriales_y_manuales"
-            android:tint="@color/semi_blue"
+            app:tint="@color/semi_blue"
             app:layout_constraintStart_toStartOf="@+id/second_vertical_divisor"
             app:layout_constraintEnd_toEndOf="@+id/third_vertical_divisor"
             app:layout_constraintTop_toTopOf="parent"
@@ -128,15 +129,14 @@
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:scaleType="fitCenter"
-            android:contentDescription="User Icon"
+            android:contentDescription="@string/user_icon"
             app:layout_constraintStart_toStartOf="@+id/third_guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:src="@drawable/baseline_person"
-            android:tint="@color/semi_blue"
             android:layout_marginVertical="10dp"
-            />
+            app:tint="@color/semi_blue" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
