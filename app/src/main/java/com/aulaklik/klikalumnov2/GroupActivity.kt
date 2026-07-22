@@ -1,5 +1,6 @@
 package com.aulaklik.klikalumnov2
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -47,6 +48,7 @@ class GroupActivity: AppCompatActivity() {
         fillViewWithData()
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     fun fillViewWithData() {
         try {
             val generalServices = GeneralServices()
@@ -287,7 +289,8 @@ class GroupActivity: AppCompatActivity() {
                     }
 
                     btnEnterGroup.setOnClickListener {
-                        //val intent = Intent(this, )
+                        val intent = Intent(this, GroupToDoActivity::class.java)
+                        startActivity(intent)
                     }
 
                     infoWrapper.addView(textViewIntitution)

@@ -11,6 +11,7 @@
         android:id="@+id/enterprise_logo"
         android:layout_width="135dp"
         android:layout_height="135dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/logo_klik"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
